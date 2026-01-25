@@ -1,0 +1,283 @@
+.app {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #E40000;
+  font-weight: 700;
+}
+
+.header p {
+  color: #6e6e6e;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.converter {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.drop-zone {
+  border: 2px dashed #E40000;
+  border-radius: 8px;
+  padding: 3rem 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  background: #fafafa;
+}
+
+.drop-zone:hover,
+.drop-zone.dragging {
+  border-color: #CC0000;
+  background: #fff5f5;
+  transform: scale(1.01);
+}
+
+.drop-zone-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.drop-icon {
+  color: #E40000;
+}
+
+.drop-text {
+  font-size: 1.1rem;
+  margin: 0;
+  color: #323232;
+  font-weight: 600;
+}
+
+.drop-subtext {
+  font-size: 0.85rem;
+  color: #6e6e6e;
+  margin: 0;
+}
+
+.file-select-btn {
+  display: inline-block;
+  padding: 0.85rem 2rem;
+  background: #E40000;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s, transform 0.2s;
+  font-size: 0.95rem;
+}
+
+.file-select-btn:hover {
+  background: #CC0000;
+  transform: translateY(-2px);
+}
+
+.file-select-btn input {
+  display: none;
+}
+
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 3px solid rgba(228, 0, 0, 0.2);
+  border-top-color: #E40000;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.file-list {
+  background: #fafafa;
+  border-radius: 8px;
+  padding: 1rem;
+  border: 1px solid #e0e0e0;
+}
+
+.file-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.5rem 1rem;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 1rem;
+}
+
+.file-list-header h2 {
+  font-size: 0.95rem;
+  margin: 0;
+  color: #323232;
+  font-weight: 600;
+}
+
+.download-all-btn {
+  padding: 0.5rem 1.2rem;
+  background: #E40000;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.download-all-btn:hover {
+  background: #CC0000;
+  transform: translateY(-2px);
+}
+
+.file-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+  border: 1px solid #e0e0e0;
+  transition: box-shadow 0.2s;
+}
+
+.file-item:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.file-item:last-child {
+  margin-bottom: 0;
+}
+
+.file-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.file-name {
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1;
+  color: #323232;
+}
+
+.file-status {
+  font-size: 0.85rem;
+  color: #6e6e6e;
+  white-space: nowrap;
+}
+
+.file-item.done .file-status {
+  color: #00875A;
+  font-weight: 600;
+}
+
+.file-item.error .file-status {
+  color: #E40000;
+}
+
+.progress-bar {
+  height: 4px;
+  background: #e0e0e0;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #E40000;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.file-actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}
+
+.btn-download {
+  padding: 0.5rem 1.2rem;
+  background: #E40000;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.btn-download:hover {
+  background: #CC0000;
+  transform: translateY(-2px);
+}
+
+.btn-remove {
+  padding: 0.5rem 0.8rem;
+  background: white;
+  color: #6e6e6e;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+  transition: all 0.2s;
+}
+
+.btn-remove:hover {
+  background: #fff5f5;
+  border-color: #E40000;
+  color: #E40000;
+}
+
+.privacy-note {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #323232;
+  padding: 1rem 1.5rem;
+  background: #fff5f5;
+  border-radius: 6px;
+  border: 1px solid #ffcccc;
+  margin-top: 1rem;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.footer a {
+  color: #6e6e6e;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.2s;
+}
+
+.footer a:hover {
+  color: #E40000;
+}
